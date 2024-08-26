@@ -1,0 +1,30 @@
+[defaults]
+host_key_checking=False
+inventory = ./inventory
+forks = 5
+log_path = /var/log/ansible.log
+
+[privilege_escalation]
+become=True
+become_method=sudo
+become_ask_pass=False
+
+
+
+###########################################################################
+
+This ansible.cfg file is a configuration file for Ansible that sets default behavior for tasks.
+
+[defaults] Section
+host_key_checking=False: Disables SSH host key checking, useful in testing but risky in production.
+inventory = ./inventory: Specifies the path to the inventory file.
+forks = 5: Limits the number of parallel connections to 5.
+log_path = /var/log/ansible.log: Sets the path for Ansible logs.
+
+[privilege_escalation] Section
+become=True: Enables privilege escalation by default.
+become_method=sudo: Uses sudo for privilege escalation.
+become_ask_pass=False: Disables password prompt for sudo.
+
+
+In summary, this config sets up key defaults like disabling SSH key checks, defining inventory location, parallel task limits, logging, and privilege escalation settings.
