@@ -1,0 +1,8 @@
+ansible-playbook -i inventory web_db.yaml -C		 ## ( -C próbny przebieg)
+
+ansible-playbook -i inventory web_db.yaml --syntax-check ## 
+
+ansible-playbook -i inventory web_db.yaml  ### starting playbook, 
+
+
+ 	
